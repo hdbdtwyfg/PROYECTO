@@ -6,9 +6,7 @@
 #define PROYECTO_CELEMENTOS_H
 
 #include "Definicion.h"
-#include "CCaja.h"
-#include "CLinea.h"
-#include "CPunto.h"
+
 #include <vector>
 
 class CElementos {
@@ -16,7 +14,6 @@ protected:
     vector<CElementos*> tablero;
 public:
     virtual ~CElementos(){}
-    virtual void dibujar() const = 0;
 };
 
 

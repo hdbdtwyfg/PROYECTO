@@ -9,6 +9,7 @@
 #include "CElementos.h"
 
 class CCaja: public CElementos {
+private:
 public:
     CCaja(){}
     virtual ~CCaja(){}

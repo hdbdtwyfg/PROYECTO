@@ -5,10 +5,12 @@
 #ifndef PROYECTO_CLINEA_H
 #define PROYECTO_CLINEA_H
 
-#include "Definicion.h"
 #include "CElementos.h"
+#include "Definicion.h"
+
 
 class CLinea: public CElementos {
+private:
 public:
     CLinea(){}
     virtual ~CLinea(){}

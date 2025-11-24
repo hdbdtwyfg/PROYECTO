@@ -9,6 +9,7 @@
 #include "CElementos.h"
 
 class CPunto: public CElementos {
+private:
 public:
     CPunto(){}
     virtual ~CPunto(){}
