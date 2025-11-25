@@ -54,3 +54,24 @@ void CTablero::mostrar() {
 
 void CTablero::revisarTablero() {
 }
+
+bool CTablero::movimiento(int x1,int y1,int x2,int y2) {
+    if (x1>=1 && x2>=1 && y1>=1 && y2>=1 && x1<=tipoTablero && x2<=tipoTablero && y1<=tipoTablero && y2<=tipoTablero) {
+        if (x1==x2 && y1==y2) {
+            cout<<"XXXXXXXX----Las coordenadas son las mismas----XXXXXXXX"<<endl;
+            return false;
+        }else if (abs(x1-x2) + abs(y1-y2)!=1) {
+            cout<<"XXXXXXXX----Las coordenadas no son adyacentes----XXXXXXXX"<<endl;
+            return false;
+        }else {
+            if (tablero[(x1*2+x2*2)/2-2][(y1*2+y2*2)/2-2]->getSimbolo() == ' ') {
+                tablero[(x1*2+x2*2)/2-2][(y1*2+y2*2)/2-2]->visibilidad();
+                return true;
+            }
+        }
+    }
+    else {
+        cout<<"XXXXXXXX----Fuera del rango----XXXXXXXX"<<endl;
+        return false;
+    }
+}
