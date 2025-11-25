@@ -17,6 +17,7 @@ int main() {
     CTablero tablero(6);
     tablero.mostrar();
 
-
+    tablero.movimiento(6,5,6,4);//prueba
+    tablero.mostrar();
     return 0;
 }
